@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".ActivityLogin">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/activity_login_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:src="@drawable/itesogram"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/activity_main_g_50_h"
+        />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/activity_main_g_50_h"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".45" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/activity_login_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/activity_main_g_50_h"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            android:hint="Teléfono, correo electrónico o usuario"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/activity_login_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            app:layout_constraintTop_toBottomOf="@id/activity_login_username"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/activity_login_iniciarsesion_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_login_password"
+            android:text="Iniciar sesión"
+            android:backgroundTint="@color/colorLightBlue"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/activity_login_textview_helpSesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toLeftOf="@id/activity_login_textview_helpSesion2"
+            app:layout_constraintTop_toBottomOf="@id/activity_login_iniciarsesion_button"
+            android:text="¿Olvidaste tus datos de inicio de sesión?"
+
+            />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/activity_login_textview_helpSesion2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/activity_login_iniciarsesion_button"
+        app:layout_constraintLeft_toRightOf="@id/activity_login_textview_helpSesion"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:text="Obten ayuda"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/activity_login_textview_Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toLeftOf="@id/activity_login_textview_Register2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:text="¿No tienes cuenta?"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/activity_login_textview_Register2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/activity_login_textview_Register"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textStyle="bold"
+        android:text="Regístrate"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginLeft="5dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout >
